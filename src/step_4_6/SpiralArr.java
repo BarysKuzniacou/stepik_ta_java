@@ -16,25 +16,22 @@ public class SpiralArr {
         int leftCol = 0, rightCol = cols - 1;
 
         while (topRow <= bottomRow && leftCol <= rightCol) {
-            // Заполняем верхнюю строку
+
             for (int i = leftCol; i <= rightCol; i++) {
                 matrix[topRow][i] = num++;
             }
             topRow++;
 
-            // Заполняем правый столбец
             for (int i = topRow; i <= bottomRow; i++) {
                 matrix[i][rightCol] = num++;
             }
             rightCol--;
 
-            // Заполняем нижнюю строку
             for (int i = rightCol; i >= leftCol; i--) {
                 matrix[bottomRow][i] = num++;
             }
             bottomRow--;
 
-            // Заполняем левый столбец
             for (int i = bottomRow; i >= topRow; i--) {
                 matrix[i][leftCol] = num++;
             }
