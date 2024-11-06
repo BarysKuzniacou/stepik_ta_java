@@ -8,5 +8,6 @@ public class RecordMain {
         System.out.println(object.toString());
         ImmutableRec object2 = new ImmutableRec("Jan", 777);
         System.out.println(object.equals(object2));
+        object2.method();
     }
 }
