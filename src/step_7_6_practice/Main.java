@@ -31,12 +31,6 @@ class Triangle extends Figure {
 
     @Override
     public double area() {
-        /*
-        0.5 * Math.abs((pointA.getX() - pointC.getX()) *
-                (pointB.getY() - pointA.getY()) -
-                (pointA.getX() - pointB.getX()) *
-                (pointC.getY() - pointA.getY()));
-        */
         return 0.5 * Math.abs(
                 (pointA.getX() * (pointB.getY() - pointC.getY())) +
                 (pointB.getX() * (pointC.getY() - pointA.getY())) +
@@ -46,7 +40,13 @@ class Triangle extends Figure {
 
     @Override
     public String pointsToString() {
-        return "";
+        String point1, point2, point3;
+
+        point1 = "(" + pointA.getX() +"," + pointA.getY() + ")";
+        point2 = "(" + pointB.getX() +"," + pointB.getY() + ")";
+        point3 = "(" + pointC.getX() +"," + pointC.getY() + ")";
+
+        return point1 + point2 + point3;
     }
 }
 
@@ -65,20 +65,20 @@ class Quadrilateral extends Figure {
 
     @Override
     public double area() {
-        double side1, side2;
-        double area;
-
-        side1 = Math.sqrt(Math.pow(b.getX() - a.getX(), 2) + Math.pow(b.getY() - a.getY(), 2));
-        side2 = Math.sqrt(Math.pow(d.getX() - a.getX(), 2) + Math.pow(d.getY() - a.getY(), 2));
-
-        area = side1 * side2;
-
-        return area;
+        return 0.5 * Math.abs(a.getX() * b.getY() + b.getX() * c.getY() + c.getX() * d.getY() + d.getX() * a.getY() -
+                (a.getY() * b.getX() + b.getY() * c.getX() + c.getY() * d.getX() + d.getY() * a.getX()));
     }
 
     @Override
     public String pointsToString() {
-        return "";
+        String point1, point2, point3, point4;
+
+        point1 = "(" + a.getX() +"," + a.getY() + ")";
+        point2 = "(" + b.getX() +"," + b.getY() + ")";
+        point3 = "(" + c.getX() +"," + c.getY() + ")";
+        point4 = "(" + d.getX() +"," + d.getY() + ")";
+
+        return point1 + point2 + point3 + point4;
     }
 }
 
@@ -93,12 +93,17 @@ class Circle extends Figure {
 
     @Override
     public double area() {
-        return Math.PI * (pointCircleX - pointCenter.getX());
+        return Math.PI * Math.pow(pointCircleX, 2) /*Math.pow((pointCircleX - pointCenter.getX()), 2)*/;
     }
 
     @Override
     public String pointsToString() {
-        return "";
+        String point1/*, point2*/;
+
+        point1 =  "(" + pointCenter.getX() +"," + pointCenter.getY() + ")";
+        //point2 =  "(" + pointCircleX +"," + pointCenter.getY() + ")";
+
+        return point1/* + point2*/;
     }
 }
 
