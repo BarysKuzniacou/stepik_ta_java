@@ -6,14 +6,32 @@ import static java.lang.String.valueOf;
 
 public class Main {
     public static void main(String[] args) {
+        ClassA objA = new ClassA();
+        ClassB objB = new ClassB();
+
+        System.out.print("ClassA().string = new ClassB().string ? ");
+        if (objA.string == objB.string) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
+        }
+
+        System.out.print("ClassA().i = new ClassB().i ? ");
+        if (objA.i == objB.i) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
+        }
+
+
         String string01 = "hi";
         String string02 = "hi";
 
-
+        System.out.print("String string01 \"hi\" = String string02 \"hi\" ? ");
         if (string01 == string02) {
-            System.out.println("string01 = string02");
+            System.out.println("true");
         } else {
-            System.out.println("string01 != string02");
+            System.out.println("false");
         }
 
         //char charAt(int pos)	Получение символа по указанной позиции pos
@@ -112,6 +130,5 @@ public class Main {
         //static String valueOf(<значение>)	Преобразование переменной базового типа к строке
         double valueDouble = 0.234567;
         System.out.println(valueOf(valueDouble));
-
     }
 }
