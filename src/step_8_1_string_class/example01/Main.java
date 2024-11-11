@@ -9,6 +9,11 @@ public class Main {
         ClassA objA = new ClassA();
         ClassB objB = new ClassB();
 
+        String paul01 = new String("Paul");
+        String paul02 = new String("Paul");
+
+        System.out.println(paul01 == paul02);
+
         System.out.print("ClassA().string = new ClassB().string ? ");
         if (objA.string == objB.string) {
             System.out.println(true);
