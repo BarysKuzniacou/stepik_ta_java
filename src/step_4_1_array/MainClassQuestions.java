@@ -62,9 +62,5 @@ public class MainClassQuestions {
         String[] ejgStr1 = null;
         String[] ejgStr2 = { null };
         System.out.println(ejgStr[0] + "  " + ejgStr2[0] + "  " + ejgStr1[0]);
-
-
-
-
     }
 }
