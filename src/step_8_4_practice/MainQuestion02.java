@@ -8,7 +8,7 @@ public class MainQuestion02 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String str = scanner.next();
+        String str = scanner.nextLine();
 
         Pattern pattern = Pattern.compile("[ ,!;.:]+");
         String words[] = pattern.split(str);
