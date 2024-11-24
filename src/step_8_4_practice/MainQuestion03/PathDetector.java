@@ -5,8 +5,8 @@ import java.util.regex.Pattern;
 public class PathDetector {
 
     public String detectPathNotation(String strPath) {
-        String rulesPathUnix = "^(~|\\.|\\.\\.|/)?(/[\\w\\s-]+)*/?([\\w\\s-]+(\\.[\\w]+)?)?$";
-        String rulesPathWindows = "^([A-Za-z]:\\\\)?([\\w\\s-]+\\\\)*([\\w\\s-]+(\\.[\\w]+)?)?$|^(\\\\?\\.\\\\?)(\\\\[\\w\\s-]+)*$";
+        String rulesPathUnix = "(((~?)|(\\.{1,2}))(/?))(([\\w\\s]*(\\.{2})?/?)*)([\\w\\s]+\\.\\w+)?";
+        String rulesPathWindows = "((([A-Za-z]:\\\\)?)|(\\.{1,2}))(([\\w\\s]*(\\.{2})?\\\\?)*)(([\\w\\s]+\\.\\w+)?)";
 
         boolean isUnixPath = Pattern.matches(rulesPathUnix, strPath);
         boolean isWindowsPath = Pattern.matches(rulesPathWindows, strPath);
