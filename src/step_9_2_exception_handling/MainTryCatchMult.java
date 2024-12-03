@@ -6,7 +6,7 @@ public class MainTryCatchMult {
             int b = 0;
             int a = 42 / b;
         /*
-        Обработка с множеством catch
+        Обработка с множеством catch. Могут быть вложенные структуры
         } catch (ArithmeticException e) {
 
             System.out.println("Потомок");
