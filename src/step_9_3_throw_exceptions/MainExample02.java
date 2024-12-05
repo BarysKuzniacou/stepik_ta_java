@@ -9,6 +9,6 @@ public class MainExample02 {
         }
     }
     public static void testExcp() {
-        //throw new Exception("test"); // проверяемое исключение
+        //throw new Exception("test"); // проверяемое исключение - есть ошибка
     }
 }
