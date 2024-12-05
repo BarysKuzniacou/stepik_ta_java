@@ -9,6 +9,6 @@ public class MainExample03 {
         }
     }
     public static void testExcp() {
-        throw new RuntimeException("test"); // непроверяемое исключение
+        throw new RuntimeException("test"); // непроверяемое исключение - нет ошибки
     }
 }
