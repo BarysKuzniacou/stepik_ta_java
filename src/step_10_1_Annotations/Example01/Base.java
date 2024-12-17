@@ -1,4 +1,4 @@
-package step_10_1.Example01;
+package step_10_1_Annotations.Example01;
 
 @BaseAction(level = 2, sqlRequest = "SELECT name, phone FROM phonebook")
 public class Base {
