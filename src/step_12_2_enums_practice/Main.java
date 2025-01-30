@@ -1,0 +1,11 @@
+package step_12_2_enums_practice;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int d = sc.nextInt();
+        System.out.println(Direction.closestToDegrees(d));
+    }
+}
