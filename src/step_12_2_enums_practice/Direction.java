@@ -12,7 +12,9 @@ public enum Direction {
     public static Direction closestToDegrees(int degrees) {
         Direction result  = Direction.N;
 
-        if (0 <= degrees && degrees < 23) {
+        degrees = (degrees % 360 + 360) % 360;
+
+        if ((0 <= degrees && degrees < 23) || (338 <= degrees && degrees <= 360)) {
             return Direction.N;
         } else if (23 <= degrees && degrees < 68) {
             return Direction.NE;
@@ -26,7 +28,7 @@ public enum Direction {
             return Direction.SW;
         } else if (248 <= degrees && degrees < 293) {
             return Direction.W;
-        } else if (degrees >= 293) {
+        } else if (293 <= degrees && degrees < 338) {
             return Direction.NW;
         }
 
